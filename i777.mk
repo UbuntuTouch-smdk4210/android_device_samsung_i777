@@ -86,5 +86,10 @@ endif
 PRODUCT_COPY_FILES += \
     	$(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
+# ubuntu-session
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu-session/SGH-I777.conf:system/SGH-I777.conf \
+    $(LOCAL_PATH)/ubuntu-session/ubuntu-session-script:system/etc/init.d/ubuntu-session-script
+
 $(call inherit-product-if-exists, vendor/samsung/i777/i777-vendor.mk)
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)

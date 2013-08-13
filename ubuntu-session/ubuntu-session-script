@@ -1,0 +1,7 @@
+#!/system/bin/sh
+
+mount -o rw,remount /system
+mv /system/SGH-I777.conf /data/ubuntu/etc/ubuntu-session.d/SGH-I777.conf
+chmod 755 /data/ubuntu/etc/ubuntu-session.d/SGH-I777.conf
+rm /system/etc/init.d/ubuntu-session-script
+mount -o ro,remount /system
